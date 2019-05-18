@@ -33,25 +33,19 @@ class App extends Component {
       });
   };
   
-  // const Luke = props => {
-  //   return (
-  //     <div>
-  //       <h1>Luke: {props.name}</h1>
-  //     </div>
-  //   )
-  // }
+
   
   render() {
-    console.log(this.state)
+    
     return (
       
       <div className="App">
         <h1 className="Header">React Wars</h1>
        
-          <ul>
-            {this.state.starwarsChars.map((obj, index) => 
-              <li className="listNames" key={index}>{obj.name} <br></br>Birth Year: {obj.birth_year}</li>)}
-          </ul>
+        <ul>
+          {this.state.starwarsChars.map((obj, index) => 
+            <li className="listNames" key={index}>{obj.name} <br></br>Birth Year: {obj.birth_year}</li>)}
+        </ul>
         
 
       </div>
