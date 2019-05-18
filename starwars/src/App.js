@@ -1,11 +1,14 @@
 import React, { Component } from 'react';
 import './App.css';
 
+// import LukeComponent from "./components/luke"
+
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       starwarsChars: []
+      
     };
   }
 
@@ -28,11 +31,32 @@ class App extends Component {
         throw new Error(err);
       });
   };
-
+  
+  // const Luke = props => {
+  //   return (
+  //     <div>
+  //       <h1>Luke: {props.name}</h1>
+  //     </div>
+  //   )
+  // }
+  
   render() {
+    console.log(this.state)
     return (
+      
       <div className="App">
         <h1 className="Header">React Wars</h1>
+        {/* <p>{this.state.starwarsChars[1].name}</p> */}
+        {/* <Luke
+          name={this.state[0].name}
+        /> */}
+        
+          <ul>
+            {this.state.starwarsChars.map(name => 
+              <li >{name.name}</li>)}
+          </ul>
+        
+
       </div>
     );
   }
