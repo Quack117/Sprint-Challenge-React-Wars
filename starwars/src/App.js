@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import './App.css';
+import './components/StarWars.css';
 
-// import LukeComponent from "./components/luke"
+// import StarWars from "./components/StarWars"
 
 class App extends Component {
   constructor(props) {
@@ -46,14 +47,10 @@ class App extends Component {
       
       <div className="App">
         <h1 className="Header">React Wars</h1>
-        {/* <p>{this.state.starwarsChars[1].name}</p> */}
-        {/* <Luke
-          name={this.state[0].name}
-        /> */}
-        
+       
           <ul>
-            {this.state.starwarsChars.map(name => 
-              <li >{name.name}</li>)}
+            {this.state.starwarsChars.map((obj, index) => 
+              <li className="listNames" key={index}>{obj.name} <br></br>Birth Year: {obj.birth_year}</li>)}
           </ul>
         
 

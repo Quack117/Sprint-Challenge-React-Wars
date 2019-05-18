@@ -1,6 +1,6 @@
 import React from "react"
 
-const LukeComponent = props => {
+const StarWars = props => {
     return (
         <div>
             <p>{props.starwarsChars.name}</p>
@@ -8,4 +8,4 @@ const LukeComponent = props => {
     )
 }
 
-export default LukeComponent;
+export default StarWars;
